@@ -5,5 +5,7 @@
 
 ##### 2. Para interactuar con las distintas peticiones de la API recuerda tener el servicio activo correctamente, de lo contrario, ninguna solicitud sera exitosa.
 
+##### 3, Por ultimo y fundamental no olvides clonar este repositorio dentro de la carpeta HTDOCS de XAMPP para su correcto funcionamiento mediante el servidor Apache. 
+
 ##### Muchas gracias por utilizar mi proyecto!!!
 
