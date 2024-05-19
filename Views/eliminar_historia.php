@@ -29,4 +29,3 @@ if (isset($_GET['history_id'])) {
     header('Location: inicio.php');
     exit;
 }
-
