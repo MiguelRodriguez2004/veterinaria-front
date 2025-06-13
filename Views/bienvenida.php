@@ -14,7 +14,7 @@ if (empty($_SESSION['name']) && !empty($_SESSION['last_name'])) {
 <!-- inicio del contenido principal -->
 <div class="page-content">
 
-    <h4 class="text-center text-secondary">Bienvenido al Sistema de Creacion de Historias Clinicas!</h4>
+    <h4 class="text-center text-secondary">Bienvenido al Sistema de Agendamiento de Citas!</h4>
 
 </div>
 <!-- fin del contenido principal -->

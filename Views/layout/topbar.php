@@ -5,10 +5,10 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
         <meta content="ie=edge" http-equiv="x-ua-compatible">
-        <title>Historial Clinico</title>
+        <title>Sistema Clinico</title>
 
         <link href="../public/app/publico/css/lib/font-awesome/font-awesome.min.css" rel="stylesheet">
-        <link href="../public/bootstrap5/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link href="../public/bootstrap5/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
         <!-- font awesome -->
         <link rel="stylesheet" href="../public/fontawesome/css/all.min.css">
@@ -73,10 +73,6 @@
         <header class="site-header">
             <div class="container-fluid" style="padding-left: 40px;">
 
-                <a href="#" class="site-logo">
-
-                </a>
-
                 <button id="show-hide-sidebar-toggle" class="show-hide-sidebar">
                     <span>toggle menu</span>
                 </button>
@@ -101,20 +97,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!--.site-header-shown-->
-
-                        <div class="mobile-menu-right-overlay"></div>
-                        <div class="site-header-collapsed">
-
-                        </div>
-                        <!--.site-header-collapsed-->
                     </div>
-                    <!--site-header-content-in-->
                 </div>
-                <!--.site-header-content-->
             </div>
-            <!--.container-fluid-->
         </header>
-
-        <div class="mobile-menu-left-overlay">
-        </div>
+</body>

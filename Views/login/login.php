@@ -8,12 +8,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/all.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
     <title>Inicio de Sesión</title>
 </head>
-
-
 
 <body>
     <img class="wave" src="img/wave.png">
@@ -49,8 +45,6 @@
                         <h5>Contraseña</h5>
                         <input type="password" id="input" class="input"
                             name="password" title="ingrese su clave para ingresar" autocomplete="current-password">
-
-
                     </div>
                 </div>
                 <div class="view">

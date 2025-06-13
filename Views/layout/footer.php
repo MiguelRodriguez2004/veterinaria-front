@@ -1,17 +1,12 @@
 
+<script src="../public/app/publico/js/lib/jquery/jquery.min.js"></script>
+<script src="../public/app/publico/js/lib/tether/tether.min.js"></script>
+<script src="../public/app/publico/js/lib/bootstrap/bootstrap.min.js"></script>
+<script src="../public/app/publico/js/plugins.js"></script>
 
-    <script src="../public/app/publico/js/lib/jquery/jquery.min.js">
-    </script>
-    <script src="../public/app/publico/js/lib/tether/tether.min.js"></script>
-    <script src="../public/app/publico/js/lib/bootstrap/bootstrap.min.js">
-    </script>
-    <script src="../public/app/publico/js/plugins.js">
-    </script>
+<script src="../public/app/publico/js/lib/datatables-net/datatables.min.js"></script>
 
-    <!-- datatables -->
-    <script src="../public/app/publico/js/lib/datatables-net/datatables.min.js"></script>
-
-    <script>
+<script>
         $(function() {
             $('#example').DataTable({
                 select: {
@@ -47,10 +42,5 @@
                 }
             });
         });
-    </script>
-
-    <script src="../public/app/publico/js/app.js"></script>
-
-    </body>
-
-    </html>
+</script>
+<script src="../public/app/publico/js/app.js"></script>
