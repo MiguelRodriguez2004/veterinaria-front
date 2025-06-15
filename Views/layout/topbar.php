@@ -89,7 +89,10 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right pt-0" aria-labelledby="dd-user-menu">
 
-                                    <h5 class="p-2 text-center bg-primary">Administrador</h5>
+                                    <h5 class="p-2 text-center bg-primary">
+                                        <?= $_SESSION['usuario']['role_name'] ?><br>
+                                        <?= $_SESSION['usuario']['name'] . ' ' . $_SESSION['usuario']['last_name'] ?>
+                                    </h5>
 
                                     <a class="dropdown-item" href="../Controllers/logoutController.php">
                                         <span class="font-icon glyphicon glyphicon-log-out"></span>Cerrar Sesión

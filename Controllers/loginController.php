@@ -13,11 +13,20 @@ if (!empty($_POST["btnAccess"])) {
 
         if ($data = $sql->fetch(PDO::FETCH_ASSOC)) {
             if ($password === $data['password']) {
+
+                $roles = [
+                    1 => 'Administrador',
+                    2 => 'Profesional',
+                    3 => 'Usuario'
+                ];
+
                 $_SESSION['usuario'] = [
-                    'id' => $data['id'],
-                    'name' => $data['name'],
-                    'email' => $data['email'],
-                    'role_id' => $data['role_id']
+                    'id'        => $data['id'],
+                    'name'      => $data['name'],
+                    'last_name' => $data['last_name'],
+                    'email'     => $data['email'],
+                    'role_id'   => $data['role_id'],
+                    'role_name' => $roles[$data['role_id']] ?? 'Rol desconocido'
                 ];
 
                 switch ($data['role_id']) {
