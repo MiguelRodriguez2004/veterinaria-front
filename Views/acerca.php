@@ -1,5 +1,3 @@
-
-
 <?php require('./layout/topbar.php'); ?>
 <?php require('./layout/sidebar.php'); ?>
 
@@ -13,7 +11,5 @@
 
 </div>
 </div>
-
-
 
 <?php require('./layout/footer.php'); ?>

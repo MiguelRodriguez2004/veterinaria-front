@@ -1,13 +1,8 @@
 <?php
 session_start();
-if (!isset($_SESSION['name'])) {
-    header("Location: login/login.php");
-    exit;
-}
+require('./layout/topbar.php'); 
+require('./layout/sidebar.php'); 
 ?>
-
-<?php require('./layout/topbar.php'); ?>
-<?php require('./layout/sidebar.php'); ?>
 
 <div class="page-content">
     <div class="container">
@@ -24,6 +19,15 @@ if (!isset($_SESSION['name'])) {
                     <label for="last_name" class="form-label">Apellido</label>
                     <input type="text" name="last_name" class="form-control" required>
                 </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="sex_id" class="form-label">Sexo</label>
+                <select name="sex" class="form-select" id="sexSelect" required>
+                    <option value="" selected disabled>Seleccione su sexo</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
             </div>
 
             <div class="mb-3">

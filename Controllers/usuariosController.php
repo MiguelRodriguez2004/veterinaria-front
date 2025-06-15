@@ -9,6 +9,7 @@ function obtenerUsuarios($connection) {
             u.name,
             u.last_name,
             u.email,
+            u.sex,
             r.name AS rol,
             p.speciality,
             p.license_num

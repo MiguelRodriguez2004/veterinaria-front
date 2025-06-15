@@ -7,13 +7,14 @@ if (isset($_POST['btnCrearUsuario'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $role_id = $_POST['role_id'];
+    $sex = $_POST['sex'];
 
       try {
         
         $connection->beginTransaction();
 
-        $stmt = $connection->prepare("INSERT INTO usuarios (name, last_name, email, password, role_id) VALUES (?, ?, ?, ?, ?)");
-        $stmt->execute([$name, $last_name, $email, $password, $role_id]);
+        $stmt = $connection->prepare("INSERT INTO usuarios (name, last_name, email, password, role_id, sex) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$name, $last_name, $email, $password, $role_id, $sex]);
 
         $usuario_id = $connection->lastInsertId();
 

@@ -13,19 +13,22 @@ if (!empty($_POST["btnAccess"])) {
 
         if ($data = $sql->fetch(PDO::FETCH_ASSOC)) {
             if ($password === $data['password']) {
-                $_SESSION['id'] = $data['id'];
-                $_SESSION['name'] = $data['name'];
-                $_SESSION['role_id'] = $data['role_id'];
+                $_SESSION['usuario'] = [
+                    'id' => $data['id'],
+                    'name' => $data['name'],
+                    'email' => $data['email'],
+                    'role_id' => $data['role_id']
+                ];
 
                 switch ($data['role_id']) {
                     case 1:
                         header("location:../bienvenida.php");
                         break;
                     case 2:
-                        header("Location: ../doctor/citas_asignadas.php");
+                        header("location:../bienvenida.php");
                         break;
                     case 3:
-                        header("Location: ../user/agendar_cita.php");
+                        header("location:../bienvenida.php");
                         break;
                     default:
                         echo "<div class='alert alert-warning'>Rol no reconocido.</div>";

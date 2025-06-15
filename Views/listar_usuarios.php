@@ -10,6 +10,11 @@ $usuarios = obtenerUsuarios($connection);
 <div class="page-content">
     <div class="container">
         <h4 class="mb-4">Listado de Usuarios</h4>
+        <?php if (!empty($_SESSION['mensaje'])): ?>
+            <div class="alert alert-info">
+                <?= $_SESSION['mensaje']; unset($_SESSION['mensaje']); ?>
+            </div>
+        <?php endif; ?>
         <table class="table table-bordered" id="example">
             <thead class="table-primary">
                 <tr>
@@ -17,6 +22,7 @@ $usuarios = obtenerUsuarios($connection);
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Email</th>
+                    <th>Sexo</th>
                     <th>Rol</th>
                     <th>Especialidad</th>
                     <th>Nº Licencia</th>
@@ -30,12 +36,15 @@ $usuarios = obtenerUsuarios($connection);
                         <td><?= htmlspecialchars($usuario['name']) ?></td>
                         <td><?= htmlspecialchars($usuario['last_name']) ?></td>
                         <td><?= htmlspecialchars($usuario['email']) ?></td>
+                        <td><?= htmlspecialchars($usuario['sex'] === 'F' ? 'Femenino' : 'Masculino') ?></td>
                         <td><?= htmlspecialchars($usuario['rol']) ?></td>
                         <td><?= $usuario['rol'] === 'Profesional' ? htmlspecialchars($usuario['speciality']) : '-' ?></td>
                         <td><?= $usuario['rol'] === 'Profesional' ? htmlspecialchars($usuario['license_num']) : '-' ?></td>
                         <td>
-                            <a href="editar_usuario.php?id=<?= $usuario['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
-                            <a href="eliminar_usuario.php?id=<?= $usuario['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este usuario?')">Eliminar</a>
+                            <a href="../Controllers/eliminarUsuariosController.php?id=<?= $usuario['id'] ?>" 
+                                class="btn btn-sm btn-danger" 
+                                onclick="return confirm('¿Estás seguro de eliminar este usuario?')">Eliminar
+                            </a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
